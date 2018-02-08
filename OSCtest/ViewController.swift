@@ -3,7 +3,8 @@
 //  OSCtest
 //
 //  Created by Isaac Clarke on 08/02/2018.
-//  Copyright © 2018 Isaac Clarke. All rights reserved.
+//  For use with Wekinator created by Rebecca Fiebrink: http://www.wekinator.org/
+//
 //
 
 import UIKit
