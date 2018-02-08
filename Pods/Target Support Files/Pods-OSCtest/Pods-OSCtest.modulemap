@@ -1,0 +1,6 @@
+framework module Pods_OSCtest {
+  umbrella header "Pods-OSCtest-umbrella.h"
+
+  export *
+  module * { export * }
+}
