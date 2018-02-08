@@ -22,6 +22,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var runningLabel: UILabel!
     @IBOutlet weak var trainingButton: UIButton!
+    @IBOutlet weak var hostIP: UITextField!
+    @IBOutlet weak var hostPort: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,13 @@ class ViewController: UIViewController{
     @IBAction func text(_ sender: UITextField) {
         text = sender.text!
         client = OSCClient(address: text, port: 6448)
+    }
+    
+    var portNum = 6448;
+    @IBAction func savePort(_ sender: UITextField) {
+        if let portNum = Int(sender.text!) {
+            client = OSCClient(address: hostIP.text!, port:portNum)
+        }
     }
     
 

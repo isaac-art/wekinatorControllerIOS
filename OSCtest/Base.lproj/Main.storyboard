@@ -54,7 +54,16 @@
                                     <action selector="trainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="py4-nK-owk"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="localhost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECW-YT-ZTe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nH-Zv-0NG">
+                                <rect key="frame" x="15" y="268" width="344" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="DELETE EXAMPLES"/>
+                                <connections>
+                                    <action selector="deleteExamplesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfV-Pn-INr"/>
+                                    <action selector="trainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JzG-yM-9F2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="192.168.0.10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECW-YT-ZTe">
                                 <rect key="frame" x="16" y="330" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -66,20 +75,25 @@
                                     <action selector="textField:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="um2-Oa-eZ5"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nH-Zv-0NG">
-                                <rect key="frame" x="15" y="268" width="344" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6448" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rt-Cq-IVf">
+                                <rect key="frame" x="16" y="368" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DELETE EXAMPLES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES" smartDashesType="no"/>
                                 <connections>
-                                    <action selector="deleteExamplesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfV-Pn-INr"/>
-                                    <action selector="trainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JzG-yM-9F2"/>
+                                    <action selector="savePort:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="WjO-AR-TDl"/>
+                                    <action selector="textField:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Nra-7A-v31"/>
+                                    <action selector="textField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="vp1-9F-1ku"/>
                                 </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hostIP" destination="ECW-YT-ZTe" id="nh4-LJ-tit"/>
+                        <outlet property="hostPort" destination="0Rt-Cq-IVf" id="nMM-a3-ghD"/>
                         <outlet property="recSwitch" destination="YKh-d6-M4U" id="M2T-0Y-KJJ"/>
                         <outlet property="recordingLabel" destination="b5m-cB-bSO" id="Om1-MM-9H3"/>
                         <outlet property="runSwitch" destination="4wa-1B-UA9" id="dgl-1Z-8lC"/>
