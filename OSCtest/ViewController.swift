@@ -31,27 +31,42 @@ class ViewController: UIViewController{
         
         recSwitch.setOn(false, animated: false)
         runSwitch.setOn(false, animated: false)
+        
         scheduledTimerWithTimeInterval()
+        
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
+        motionManager.startGyroUpdates()
+        motionManager.startMagnetometerUpdates()
         
-        let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ")
+        let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ", "rotationX", "rotationY", "rotationZ", "magnetoX", "magnetoY", "magnetoZ")
         client.send(message)
     }
 
     func scheduledTimerWithTimeInterval(){
-        timer = Timer.scheduledTimer(timeInterval: 0.08, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+        //update 30 times a second
+        timer = Timer.scheduledTimer(timeInterval: 1.0/30.0, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
     }
     @objc func updateCounting(){
         //print("counting..")
         if let accelerometerData = motionManager.accelerometerData {
             //Mapping the values from -1,1 to 0,1
-            let xVal = 0 + (1 - 0) * ((accelerometerData.acceleration.x - -1) / (1 - -1));
-            let yVal = 0 + (1 - 0) * ((accelerometerData.acceleration.y - -1) / (1 - -1));
-            let zVal = 0 + (1 - 0) * ((accelerometerData.acceleration.z - -1) / (1 - -1));
-            let message = OSCMessage(address, xVal, yVal, zVal)
+            let xVal = (accelerometerData.acceleration.x + 1) / 2;
+            let yVal = (accelerometerData.acceleration.y + 1) / 2;
+            let zVal = (accelerometerData.acceleration.z + 1) / 2;
+            
+            // TODO: Map these to 0,1
+            let xRot = motionManager.gyroData?.rotationRate.x
+            let yRot = motionManager.gyroData?.rotationRate.y
+            let zRot = motionManager.gyroData?.rotationRate.z
+            let xMag = motionManager.magnetometerData?.magneticField.x
+            let yMag = motionManager.magnetometerData?.magneticField.y
+            let zMag = motionManager.magnetometerData?.magneticField.z
+            
+            let message = OSCMessage(address, xVal, yVal, zVal, xRot, yRot, zRot, xMag, yMag, zMag)
             client.send(message)
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
