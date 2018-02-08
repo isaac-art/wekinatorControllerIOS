@@ -11,7 +11,7 @@ import UIKit
 import SwiftOSC
 
 
-var client = OSCClient(address: "localhost", port: 6448)
+var client = OSCClient(address: "192.168.0.10", port: 6448)
 
 
 @UIApplicationMain
