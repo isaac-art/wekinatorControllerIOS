@@ -30,7 +30,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var MotionView: UIView!
     @IBOutlet weak var CameraView: UIView!
     
-
+    @IBOutlet weak var accelerometerLabel: UILabel!
+    @IBOutlet weak var attitudeLabel: UILabel!
+    @IBOutlet weak var rotationLabel: UILabel!
+    @IBOutlet weak var magneticHeadingLabel: UILabel!
+    
     
     var motionManager: CMMotionManager!
     let locationManager = CLLocationManager()
@@ -114,6 +118,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                 //send osc message
                 let message = OSCMessage(address, xVal, yVal, zVal, xRot, yRot, zRot, roll, pitch, yaw, mappedMagHeading)
                 client.send(message)
+                
+                accelerometerLabel.text = "x: \(xVal) \ny: \(yVal) \nz: \(zVal) "
+                attitudeLabel.text = "roll: \(roll) \npitch \(pitch) \nyaw \(yaw)"
+                rotationLabel.text = "x: \(xRot) \ny: \(yRot) \nz: \(zRot)"
+                magneticHeadingLabel.text = "\(magHeading)"
+                
             }
         }
         else if(featureSet == "Camera"){
