@@ -6,21 +6,22 @@ Controls for recording, training, and running and deleting training examples.
 
 Enter host ip and port in the text boxes.
 
-Will pass:
-*- accelerometer(x,y,z) 
-*- moving rotation(x,y,z)
-*- attitude(roll,pitch,yaw)
-*- magnetic heading 
+Will pass osc messages for:
 
-as 10 seperate features
+* accelerometer(x,y,z) 
+* moving rotation(x,y,z)
+* attitude(roll,pitch,yaw)
+* magnetic heading 
 
-Going to add in touch events, sliders, button etc...
+as 10 seperate features.
+
+TODO:
+* add touch events, sliders, button etc...
+* moving rotation needs mapping to 0-1
 
 
 -- REQUIRES SwiftOSC
 
-
---note moving rotation needs mapping to 0-1
 
 ![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshot.jpg)
 ![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/dataPlotter.png)
