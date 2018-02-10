@@ -8,3 +8,6 @@ Enter host ip and port in the text boxes.
 
 
 Will pass accelerometer(x,y,z), magnetometer(x,y,z), and gyrodata(x,y,z) as seperate features
+
+
+-- REQUIRES SwiftOSC
