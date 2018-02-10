@@ -22,4 +22,4 @@ TODO:
 
 
 ![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshot.jpg)
-![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/dataPlotterExample.png)
+![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/dataPlotterExample2.png)
