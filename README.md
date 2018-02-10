@@ -17,8 +17,6 @@ as 10 seperate features.
 
 TODO:
 * add touch events, sliders, button etc...
-* moving rotation needs mapping to 0-1
-
 
 -- REQUIRES SwiftOSC
 

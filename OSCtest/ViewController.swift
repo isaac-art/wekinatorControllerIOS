@@ -24,6 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var trainingButton: UIButton!
     @IBOutlet weak var hostIP: UITextField!
     @IBOutlet weak var hostPort: UITextField!
+   // @IBOutlet weak var outputNumText: UILabel!
     
     
     var motionManager: CMMotionManager!
@@ -42,6 +43,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         
         recSwitch.setOn(false, animated: false)
         runSwitch.setOn(false, animated: false)
+        //outputNumText.text = "1"
         
         scheduledTimerWithTimeInterval()
         
@@ -90,9 +92,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                 yaw = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.yaw)!) + 180) / 360), minValue:0.0, maxValue:1.0)
             }
             if(motionManager.gyroData?.rotationRate.x != nil){
-                xRot = (motionManager.gyroData?.rotationRate.x)!
-                yRot = (motionManager.gyroData?.rotationRate.y)!
-                zRot = (motionManager.gyroData?.rotationRate.z)!
+                xRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.x)!) + 180) / 360), minValue:0.0, maxValue:1.0)
+                yRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.y)!) + 90) / 180), minValue:0.0, maxValue:1.0)
+                zRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.z)!) + 180) / 360), minValue:0.0, maxValue:1.0)
             }
             //uncalibrated magnetometer readings
             //let xMag = motionManager.magnetometerData?.magneticField.x
@@ -177,4 +179,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
             runningLabel.text = "RUN"
         }
     }
+    
+//    @IBAction func switchOutput(_ sender: UIStepper) {
+//        let message = OSCMessage(OSCAddressPattern("/wekinator/control/outputs"), sender.value)
+//        client.send(message)
+//        outputNumText.text = String(Int(sender.value))
+//
+//    }
 }
