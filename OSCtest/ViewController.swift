@@ -14,6 +14,7 @@ import CoreLocation
 
 let address = OSCAddressPattern("/wek/inputs")
 var timer = Timer()
+var featureSet = "Motion"
 
 class ViewController: UIViewController, CLLocationManagerDelegate{
     
@@ -25,7 +26,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var hostIP: UITextField!
     @IBOutlet weak var hostPort: UITextField!
    // @IBOutlet weak var outputNumText: UILabel!
+    @IBOutlet weak var PadsView: UIView!
+    @IBOutlet weak var MotionView: UIView!
+    @IBOutlet weak var CameraView: UIView!
     
+
     
     var motionManager: CMMotionManager!
     let locationManager = CLLocationManager()
@@ -41,6 +46,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        MotionView.isHidden = false
+        PadsView.isHidden = true
+        CameraView.isHidden = true
         recSwitch.setOn(false, animated: false)
         runSwitch.setOn(false, animated: false)
         //outputNumText.text = "1"
@@ -66,49 +74,50 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         magHeading = heading.magneticHeading
     }
     
-
-    
     func scheduledTimerWithTimeInterval(){
-        //update 30 times a second
+        //update 30 times a second for motion
         timer = Timer.scheduledTimer(timeInterval: 1.0/30.0, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
     }
     @objc func updateCounting(){
-        
-        
-        if let accelerometerData = motionManager.accelerometerData {
-            //MAP:  start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
-            //Mapping the values from -1,1 to 0,1
-            let xVal = clamp(((accelerometerData.acceleration.x + 1) / 2), minValue:0.0, maxValue:1.0)
-            let yVal = clamp(((accelerometerData.acceleration.y + 1) / 2), minValue:0.0, maxValue:1.0)
-            let zVal = clamp(((accelerometerData.acceleration.z + 1) / 2), minValue:0.0, maxValue:1.0)
-            
-            // gyro
-            if(motionManager.deviceMotion?.attitude.roll != nil){
-                //roll Min : -180°, Max : 180°
-                //pitch Min : -90°, Max : 90°
-                //yaw Min : -180°, Max : 180°
-                roll = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.roll)!) + 180) / 360), minValue:0.0, maxValue:1.0)
-                pitch = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.pitch)!) + 90) / 180), minValue:0.0, maxValue:1.0)
-                yaw = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.yaw)!) + 180) / 360), minValue:0.0, maxValue:1.0)
+        if(featureSet == "Motion"){
+            if let accelerometerData = motionManager.accelerometerData {
+                //MAP:  start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+                //Mapping the values from -1,1 to 0,1
+                let xVal = clamp(((accelerometerData.acceleration.x + 1) / 2), minValue:0.0, maxValue:1.0)
+                let yVal = clamp(((accelerometerData.acceleration.y + 1) / 2), minValue:0.0, maxValue:1.0)
+                let zVal = clamp(((accelerometerData.acceleration.z + 1) / 2), minValue:0.0, maxValue:1.0)
+                
+                // gyro
+                if(motionManager.deviceMotion?.attitude.roll != nil){
+                    //roll Min : -180°, Max : 180°
+                    //pitch Min : -90°, Max : 90°
+                    //yaw Min : -180°, Max : 180°
+                    roll = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.roll)!) + 180) / 360), minValue:0.0, maxValue:1.0)
+                    pitch = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.pitch)!) + 90) / 180), minValue:0.0, maxValue:1.0)
+                    yaw = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.yaw)!) + 180) / 360), minValue:0.0, maxValue:1.0)
+                }
+                if(motionManager.gyroData?.rotationRate.x != nil){
+                    xRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.x)!) + 180) / 360), minValue:0.0, maxValue:1.0)
+                    yRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.y)!) + 90) / 180), minValue:0.0, maxValue:1.0)
+                    zRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.z)!) + 180) / 360), minValue:0.0, maxValue:1.0)
+                }
+                //uncalibrated magnetometer readings
+                //let xMag = motionManager.magnetometerData?.magneticField.x
+                //let yMag = motionManager.magnetometerData?.magneticField.y
+                //let zMag = motionManager.magnetometerData?.magneticField.z
+                
+                //use locationManagers heading already calibrated
+                var mappedMagHeading = 0.0
+                if locationManager.heading?.magneticHeading != nil{
+                    mappedMagHeading = clamp((magHeading/360), minValue:0.0, maxValue:1.0)
+                }
+                //send osc message
+                let message = OSCMessage(address, xVal, yVal, zVal, xRot, yRot, zRot, roll, pitch, yaw, mappedMagHeading)
+                client.send(message)
             }
-            if(motionManager.gyroData?.rotationRate.x != nil){
-                xRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.x)!) + 180) / 360), minValue:0.0, maxValue:1.0)
-                yRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.y)!) + 90) / 180), minValue:0.0, maxValue:1.0)
-                zRot = clamp(((degrees(x:(motionManager.gyroData?.rotationRate.z)!) + 180) / 360), minValue:0.0, maxValue:1.0)
-            }
-            //uncalibrated magnetometer readings
-            //let xMag = motionManager.magnetometerData?.magneticField.x
-            //let yMag = motionManager.magnetometerData?.magneticField.y
-            //let zMag = motionManager.magnetometerData?.magneticField.z
-            
-            //use locationManagers heading already calibrated
-            var mappedMagHeading = 0.0
-            if locationManager.heading?.magneticHeading != nil{
-                mappedMagHeading = clamp((magHeading/360), minValue:0.0, maxValue:1.0)
-            }
-            //send osc message
-            let message = OSCMessage(address, xVal, yVal, zVal, xRot, yRot, zRot, roll, pitch, yaw, mappedMagHeading)
-            client.send(message)
+        }
+        else if(featureSet == "Camera"){
+           // print("camera")
         }
     }
     
@@ -179,6 +188,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
             runningLabel.text = "RUN"
         }
     }
+    
+    @IBAction func featureSelector(_ sender: UISegmentedControl) {
+        PadsView.isHidden = true
+        MotionView.isHidden = true
+        CameraView.isHidden = true
+        if(sender.selectedSegmentIndex == 0){
+            featureSet = "Motion"
+            MotionView.isHidden = false
+        }else if(sender.selectedSegmentIndex == 1){
+            featureSet = "Pads"
+             PadsView.isHidden = false
+        }else if(sender.selectedSegmentIndex == 2){
+            featureSet = "Camera"
+            CameraView.isHidden = false
+        }
+    }
+    
+    
+    
+    
     
 //    @IBAction func switchOutput(_ sender: UIStepper) {
 //        let message = OSCMessage(OSCAddressPattern("/wekinator/control/outputs"), sender.value)

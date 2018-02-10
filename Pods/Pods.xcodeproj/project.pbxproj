@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,7 +50,7 @@
 		092B5A6DF79D5FF369B62F00326F4C39 /* Pods-OSCtest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSCtest-resources.sh"; sourceTree = "<group>"; };
 		0A6CC89E471D9FB5579A4E7A869DCAFC /* OSCServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCServer.swift; path = Framework/SwiftOSC/Communication/OSCServer.swift; sourceTree = "<group>"; };
 		1D2C842666D90E2EFDFD66149CA16841 /* yudpsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = yudpsocket.swift; path = Framework/SwiftOSC/Communication/ysocket/yudpsocket.swift; sourceTree = "<group>"; };
-		1D49821E9EBF77AB33F3B731A31869EC /* Pods_OSCtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OSCtest.framework; path = "Pods-OSCtest.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D49821E9EBF77AB33F3B731A31869EC /* Pods_OSCtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSCtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D4F586F062ABA83C4D172B360724E3 /* OSCMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCMessage.swift; path = Framework/SwiftOSC/Elements/OSCMessage.swift; sourceTree = "<group>"; };
 		25B8617679CB8440A3A66551A111F6C7 /* Timetag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timetag.swift; path = Framework/SwiftOSC/Types/Timetag.swift; sourceTree = "<group>"; };
 		28615BC85DC46C2A1D567928B2AC1364 /* Pods-OSCtest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OSCtest-umbrella.h"; sourceTree = "<group>"; };
@@ -61,17 +61,17 @@
 		6200ADE67ED62B093EB758278E5273D3 /* OSCElementProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCElementProtocol.swift; path = Framework/SwiftOSC/Elements/OSCElementProtocol.swift; sourceTree = "<group>"; };
 		626891CAFC6D15E4CCEC25282FFE5DDA /* Pods-OSCtest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OSCtest-acknowledgements.plist"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6E2CC529D9E096D431314AC19BFA436B /* yudpsocket.c */ = {isa = PBXFileReference; includeInIndex = 1; name = yudpsocket.c; path = Framework/SwiftOSC/Communication/ysocket/yudpsocket.c; sourceTree = "<group>"; };
-		6E6DE467F3DD7D8DFAF07B9C4FD18C70 /* Pods-OSCtest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-OSCtest.modulemap"; sourceTree = "<group>"; };
+		6E2CC529D9E096D431314AC19BFA436B /* yudpsocket.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = yudpsocket.c; path = Framework/SwiftOSC/Communication/ysocket/yudpsocket.c; sourceTree = "<group>"; };
+		6E6DE467F3DD7D8DFAF07B9C4FD18C70 /* Pods-OSCtest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-OSCtest.modulemap"; sourceTree = "<group>"; };
 		76D61C30889E48BCADCD716BA96404AF /* Pods-OSCtest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OSCtest-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7829FEC9246EBDFB2D9F1E5D5303B0E0 /* SwiftOSC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftOSC.xcconfig; sourceTree = "<group>"; };
 		7A701D6E6812962A5BAAAE5EC877ED99 /* Pods-OSCtest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OSCtest-dummy.m"; sourceTree = "<group>"; };
 		7FB01C3CEA563E694F611FD85C1EFE4E /* Impulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Impulse.swift; path = Framework/SwiftOSC/Types/Impulse.swift; sourceTree = "<group>"; };
 		898A7DB067E307E5C6A3470B0ED79A48 /* Pods-OSCtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSCtest.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B9209FD89E5BAD2A04AD0B802A15733 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Framework/SwiftOSC/Helpers/Extensions.swift; sourceTree = "<group>"; };
 		A3F4D92A711BC4B86F40052D4792115C /* Pods-OSCtest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSCtest-frameworks.sh"; sourceTree = "<group>"; };
-		AEB779E071D16ADD6062C9624673C629 /* SwiftOSC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftOSC.modulemap; sourceTree = "<group>"; };
+		AEB779E071D16ADD6062C9624673C629 /* SwiftOSC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftOSC.modulemap; sourceTree = "<group>"; };
 		B0C27E6013DEF07D136A2EDBD3707BA9 /* SwiftOSC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOSC-umbrella.h"; sourceTree = "<group>"; };
 		B3DC869292313E1D119ED609C53736E6 /* OSCAddressPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCAddressPattern.swift; path = Framework/SwiftOSC/Addresses/OSCAddressPattern.swift; sourceTree = "<group>"; };
 		B71DB49D0EE861D2D3299A37A62D2B72 /* Pods-OSCtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSCtest.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		C41EA244187993DBB475F2676C86ECE6 /* OSCAddress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCAddress.swift; path = Framework/SwiftOSC/Addresses/OSCAddress.swift; sourceTree = "<group>"; };
 		CC844557230C7B0E845F9E42B0E23227 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D29530200FCF002D2D86A8D241083F08 /* Float.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Float.swift; path = Framework/SwiftOSC/Types/Float.swift; sourceTree = "<group>"; };
-		D9C7053687070C1A7FF5C8A0228FC3CD /* SwiftOSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftOSC.framework; path = SwiftOSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C7053687070C1A7FF5C8A0228FC3CD /* SwiftOSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftOSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA18B6340235688B7BE503CD21D5672B /* SwiftOSC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOSC-prefix.pch"; sourceTree = "<group>"; };
 		E7EEED63E3BE9278A93B23DEA5548FE1 /* SwiftOSC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOSC-dummy.m"; sourceTree = "<group>"; };
 		E8F85E2757A6F3A8106B3B8D1B31674D /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Framework/SwiftOSC/Types/Blob.swift; sourceTree = "<group>"; };
@@ -177,7 +177,6 @@
 				1D2C842666D90E2EFDFD66149CA16841 /* yudpsocket.swift */,
 				032B2884995CEBC09A59EDED868B0FE5 /* Support Files */,
 			);
-			name = SwiftOSC;
 			path = SwiftOSC;
 			sourceTree = "<group>";
 		};
@@ -290,6 +289,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					D223F125B31C1E01DD094EB24594EEC1 = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -362,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 898A7DB067E307E5C6A3470B0ED79A48 /* Pods-OSCtest.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -386,6 +391,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -543,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B71DB49D0EE861D2D3299A37A62D2B72 /* Pods-OSCtest.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -566,6 +573,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
