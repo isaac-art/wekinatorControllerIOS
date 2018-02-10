@@ -120,7 +120,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                 client.send(message)
                 
                 accelerometerLabel.text = "x: \(xVal) \ny: \(yVal) \nz: \(zVal) "
-                attitudeLabel.text = "roll: \(roll) \npitch \(pitch) \nyaw \(yaw)"
+                attitudeLabel.text = "roll: \(roll) \npitch: \(pitch) \nyaw: \(yaw)"
                 rotationLabel.text = "x: \(xRot) \ny: \(yRot) \nz: \(zRot)"
                 magneticHeadingLabel.text = "\(magHeading)"
                 
