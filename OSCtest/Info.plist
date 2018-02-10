@@ -43,5 +43,7 @@
 	</array>
 	<key>NSMotionUsageDescription</key>
 	<string>Uses motion as input for wekinator</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Uses heading as input for wekinator</string>
 </dict>
 </plist>

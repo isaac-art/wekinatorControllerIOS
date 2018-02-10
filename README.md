@@ -6,12 +6,21 @@ Controls for recording, training, and running and deleting training examples.
 
 Enter host ip and port in the text boxes.
 
-Will pass accelerometer(x,y,z), magnetometer(x,y,z), and gyrodata(x,y,z) as seperate features
+Will pass:
+*- accelerometer(x,y,z) 
+*- moving rotation(x,y,z)
+*- attitude(roll,pitch,yaw)
+*- magnetic heading 
+
+as 10 seperate features
+
+Going to add in touch events, sliders, button etc...
+
 
 -- REQUIRES SwiftOSC
 
 
---note gyro and magnetometer still need mapping to 0-1 range
+--note moving rotation needs mapping to 0-1
 
 ![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshot.jpg)
 ![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/dataPlotter.png)

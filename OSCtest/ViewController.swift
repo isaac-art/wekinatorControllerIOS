@@ -10,12 +10,12 @@
 import UIKit
 import SwiftOSC
 import CoreMotion
+import CoreLocation
 
 let address = OSCAddressPattern("/wek/inputs")
-var motionManager: CMMotionManager!
 var timer = Timer()
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet weak var recSwitch: UISwitch!
     @IBOutlet weak var runSwitch: UISwitch!
@@ -25,6 +25,17 @@ class ViewController: UIViewController{
     @IBOutlet weak var hostIP: UITextField!
     @IBOutlet weak var hostPort: UITextField!
     
+    
+    var motionManager: CMMotionManager!
+    let locationManager = CLLocationManager()
+    var magHeading = CLLocationDirection()
+    
+    var xRot = 0.0
+    var yRot = 0.0
+    var zRot = 0.0
+    var roll = 0.0
+    var pitch = 0.0
+    var yaw = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,32 +48,64 @@ class ViewController: UIViewController{
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
         motionManager.startGyroUpdates()
-        motionManager.startMagnetometerUpdates()
+        motionManager.startDeviceMotionUpdates()
         
-        let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ", "rotationX", "rotationY", "rotationZ", "magnetoX", "magnetoY", "magnetoZ")
+        if (CLLocationManager.headingAvailable()) {
+            locationManager.headingFilter = 1
+            locationManager.startUpdatingHeading()
+            locationManager.delegate = self
+        }
+        
+        let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ", "rotationX", "rotationY", "rotationZ", "roll", "pitch", "yaw", "magneticHeading")
         client.send(message)
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading heading: CLHeading) {
+        magHeading = heading.magneticHeading
+    }
+    
 
+    
     func scheduledTimerWithTimeInterval(){
         //update 30 times a second
         timer = Timer.scheduledTimer(timeInterval: 1.0/30.0, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
     }
     @objc func updateCounting(){
+        
+        
         if let accelerometerData = motionManager.accelerometerData {
             //MAP:  start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
             //Mapping the values from -1,1 to 0,1
             let xVal = clamp(((accelerometerData.acceleration.x + 1) / 2), minValue:0.0, maxValue:1.0)
             let yVal = clamp(((accelerometerData.acceleration.y + 1) / 2), minValue:0.0, maxValue:1.0)
             let zVal = clamp(((accelerometerData.acceleration.z + 1) / 2), minValue:0.0, maxValue:1.0)
-            // TODO: Map these to 0,1
-            let xRot = motionManager.gyroData?.rotationRate.x
-            let yRot = motionManager.gyroData?.rotationRate.y
-            let zRot = motionManager.gyroData?.rotationRate.z
-            let xMag = motionManager.magnetometerData?.magneticField.x
-            let yMag = motionManager.magnetometerData?.magneticField.y
-            let zMag = motionManager.magnetometerData?.magneticField.z
+            
+            // gyro
+            if(motionManager.deviceMotion?.attitude.roll != nil){
+                //roll Min : -180°, Max : 180°
+                //pitch Min : -90°, Max : 90°
+                //yaw Min : -180°, Max : 180°
+                roll = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.roll)!) + 180) / 360), minValue:0.0, maxValue:1.0)
+                pitch = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.pitch)!) + 90) / 180), minValue:0.0, maxValue:1.0)
+                yaw = clamp(((degrees(x:(motionManager.deviceMotion?.attitude.yaw)!) + 180) / 360), minValue:0.0, maxValue:1.0)
+            }
+            if(motionManager.gyroData?.rotationRate.x != nil){
+                xRot = (motionManager.gyroData?.rotationRate.x)!
+                yRot = (motionManager.gyroData?.rotationRate.y)!
+                zRot = (motionManager.gyroData?.rotationRate.z)!
+            }
+            //uncalibrated magnetometer readings
+            //let xMag = motionManager.magnetometerData?.magneticField.x
+            //let yMag = motionManager.magnetometerData?.magneticField.y
+            //let zMag = motionManager.magnetometerData?.magneticField.z
+            
+            //use locationManagers heading already calibrated
+            var mappedMagHeading = 0.0
+            if locationManager.heading?.magneticHeading != nil{
+                mappedMagHeading = clamp((magHeading/360), minValue:0.0, maxValue:1.0)
+            }
             //send osc message
-            let message = OSCMessage(address, xVal, yVal, zVal, xRot, yRot, zRot, xMag, yMag, zMag)
+            let message = OSCMessage(address, xVal, yVal, zVal, xRot, yRot, zRot, roll, pitch, yaw, mappedMagHeading)
             client.send(message)
         }
     }
@@ -70,6 +113,10 @@ class ViewController: UIViewController{
     //CLAMP clamp(newValue, minValue: 0, maxValue: 1)
     public func clamp<T>(_ value: T, minValue: T, maxValue: T) -> T where T : Comparable {
         return min(max(value, minValue), maxValue)
+    }
+    
+    public func degrees(x: Double) -> Double{
+       return (180 * x / .pi)
     }
     
     override func didReceiveMemoryWarning() {
