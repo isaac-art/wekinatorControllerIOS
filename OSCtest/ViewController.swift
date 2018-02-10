@@ -25,9 +25,9 @@ class ViewController: UIViewController{
     @IBOutlet weak var hostIP: UITextField!
     @IBOutlet weak var hostPort: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         recSwitch.setOn(false, animated: false)
         runSwitch.setOn(false, animated: false)
@@ -48,13 +48,12 @@ class ViewController: UIViewController{
         timer = Timer.scheduledTimer(timeInterval: 1.0/30.0, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
     }
     @objc func updateCounting(){
-        //print("counting..")
         if let accelerometerData = motionManager.accelerometerData {
+            //MAP:  start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
             //Mapping the values from -1,1 to 0,1
-            let xVal = (accelerometerData.acceleration.x + 1) / 2;
-            let yVal = (accelerometerData.acceleration.y + 1) / 2;
-            let zVal = (accelerometerData.acceleration.z + 1) / 2;
-            
+            let xVal = clamp(((accelerometerData.acceleration.x + 1) / 2), minValue:0.0, maxValue:1.0)
+            let yVal = clamp(((accelerometerData.acceleration.y + 1) / 2), minValue:0.0, maxValue:1.0)
+            let zVal = clamp(((accelerometerData.acceleration.z + 1) / 2), minValue:0.0, maxValue:1.0)
             // TODO: Map these to 0,1
             let xRot = motionManager.gyroData?.rotationRate.x
             let yRot = motionManager.gyroData?.rotationRate.y
@@ -62,11 +61,15 @@ class ViewController: UIViewController{
             let xMag = motionManager.magnetometerData?.magneticField.x
             let yMag = motionManager.magnetometerData?.magneticField.y
             let zMag = motionManager.magnetometerData?.magneticField.z
-            
+            //send osc message
             let message = OSCMessage(address, xVal, yVal, zVal, xRot, yRot, zRot, xMag, yMag, zMag)
             client.send(message)
         }
-        
+    }
+    
+    //CLAMP clamp(newValue, minValue: 0, maxValue: 1)
+    public func clamp<T>(_ value: T, minValue: T, maxValue: T) -> T where T : Comparable {
+        return min(max(value, minValue), maxValue)
     }
     
     override func didReceiveMemoryWarning() {
@@ -128,4 +131,3 @@ class ViewController: UIViewController{
         }
     }
 }
-
