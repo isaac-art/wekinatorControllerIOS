@@ -43,8 +43,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     let locationManager = CLLocationManager()
     var magHeading = CLLocationDirection()
     
-    var captureSession: AVCaptureSession?
-    var videoLayer: AVCaptureVideoPreviewLayer?
+//    var captureSession: AVCaptureSession?
+//    var videoLayer: AVCaptureVideoPreviewLayer?
     
     var xRot = 0.0
     var yRot = 0.0
@@ -79,19 +79,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ", "rotationX", "rotationY", "rotationZ", "roll", "pitch", "yaw", "magneticHeading")
         client.send(message)
         
-        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
-        do {
-            let input = try AVCaptureDeviceInput(device: captureDevice!)
-            captureSession = AVCaptureSession()
-            captureSession?.addInput(input)
-            videoLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-           // videoLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            videoLayer?.frame = view.layer.bounds
-            CameraView.layer.addSublayer(videoLayer!)
-            captureSession?.startRunning()
-        } catch {
-            print(error)
-        }
+//        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
+//        do {
+//            let input = try AVCaptureDeviceInput(device: captureDevice!)
+//            captureSession = AVCaptureSession()
+//            captureSession?.addInput(input)
+//            videoLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+//           // videoLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//            videoLayer?.frame = view.layer.bounds
+//            CameraView.layer.addSublayer(videoLayer!)
+//            captureSession?.startRunning()
+//        } catch {
+//            print(error)
+//        }
         
         
         
