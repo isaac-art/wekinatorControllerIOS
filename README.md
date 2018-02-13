@@ -6,20 +6,23 @@ Controls for recording, training, and running and deleting training examples.
 
 Enter host ip and port in the text boxes.
 
-Will pass osc messages for:
-
+MOTION TAB
 * accelerometer(x,y,z) 
 * moving rotation(x,y,z)
 * attitude(roll,pitch,yaw)
 * magnetic heading 
-
 as 10 seperate features.
 
+PAD TAB
+* x position
+* y position
+
 TODO:
-* add touch events, sliders, button etc...
+* adding camera input
 
--- REQUIRES SwiftOSC
+-- REQUIRES [SwiftOSC](https://github.com/devinroth/SwiftOSC)
 
 
-![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshot.jpg)
-![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/dataPlotterExample2.png)
+![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1333.PNG)
+![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1334.PNG)
+![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/dataPlotterExample2.png)

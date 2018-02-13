@@ -87,7 +87,6 @@
                                 <segments>
                                     <segment title="Motion"/>
                                     <segment title="Pad"/>
-                                    <segment title="Camera"/>
                                 </segments>
                                 <connections>
                                     <action selector="featureSelector:" destination="BYZ-38-t0r" eventType="valueChanged" id="pE5-a3-pSe"/>
@@ -115,7 +114,7 @@
                                     <action selector="trainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JzG-yM-9F2"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEp-27-khG" userLabel="cameraView">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEp-27-khG" userLabel="cameraView">
                                 <rect key="frame" x="15" y="213" width="344" height="434"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
