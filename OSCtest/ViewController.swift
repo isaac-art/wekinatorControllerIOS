@@ -35,6 +35,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var rotationLabel: UILabel!
     @IBOutlet weak var magneticHeadingLabel: UILabel!
     
+    @IBOutlet weak var pointer: UIImageView!
     
     var motionManager: CMMotionManager!
     let locationManager = CLLocationManager()
@@ -126,6 +127,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                 
             }
         }
+        else if(featureSet == "Pad"){
+            //fit the pointer position value into the bounded area then map
+            //MAP:  start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+            let xPos = Double( clamp(((pointer.center.x - 25) / 317.5), minValue:0.0, maxValue:1.0 ))
+            let yPos =  Double( clamp(((pointer.center.y - 225) / 409.5), minValue:0.0, maxValue:1.0 ))
+            //print("x: \(xPos), y: \(yPos)")
+            let message = OSCMessage(address,xPos,yPos)
+            client.send(message)
+        }
         else if(featureSet == "Camera"){
            // print("camera")
         }
@@ -207,7 +217,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
             featureSet = "Motion"
             MotionView.isHidden = false
         }else if(sender.selectedSegmentIndex == 1){
-            featureSet = "Pads"
+            featureSet = "Pad"
              PadsView.isHidden = false
         }else if(sender.selectedSegmentIndex == 2){
             featureSet = "Camera"
@@ -215,8 +225,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         }
     }
     
+    @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: self.view)
+        let xPos = location.x
+        let yPos = location.y
+        //print("x: \(xPos), y: \(yPos)")
+        if(xPos < 25.0 || xPos > 345.0 || yPos < 225.0 || yPos > 635.0){
+            //outofbounds
+        }else{
+            pointer.center.x = xPos
+            pointer.center.y = yPos
+        }
     
-    
+    }
     
     
 //    @IBAction func switchOutput(_ sender: UIStepper) {
