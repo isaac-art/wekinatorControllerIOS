@@ -358,7 +358,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81AA52EC4750F0D3E71EFF3C /* Pods-OSCtest.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZFVE8FF95;
 				INFOPLIST_FILE = OSCtest/Info.plist;
@@ -374,7 +374,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8B05308FFB8965A98E0D8A6 /* Pods-OSCtest.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZFVE8FF95;
 				INFOPLIST_FILE = OSCtest/Info.plist;

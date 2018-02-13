@@ -26,13 +26,6 @@
                                     <action selector="toggleRunning:" destination="BYZ-38-t0r" eventType="valueChanged" id="R88-fC-ema"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5m-cB-bSO">
-                                <rect key="frame" x="70" y="45" width="106" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLB-OM-O2F">
                                 <rect key="frame" x="70" y="86" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,6 +41,13 @@
                                     <action selector="toggleRecording:" destination="BYZ-38-t0r" eventType="valueChanged" id="z9f-ZA-c8E"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5m-cB-bSO">
+                                <rect key="frame" x="70" y="45" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZy-Qt-eh9">
                                 <rect key="frame" x="195" y="42" width="164" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,6 +55,16 @@
                                 <state key="normal" title="TRAIN"/>
                                 <connections>
                                     <action selector="trainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="py4-nK-owk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nH-Zv-0NG">
+                                <rect key="frame" x="195" y="81" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="DELETE EXAMPLES"/>
+                                <connections>
+                                    <action selector="deleteExamplesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfV-Pn-INr"/>
+                                    <action selector="trainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JzG-yM-9F2"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.0.10" borderStyle="roundedRect" placeholder="192.168.0.10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECW-YT-ZTe">
@@ -87,38 +97,12 @@
                                 <segments>
                                     <segment title="Motion"/>
                                     <segment title="Pad"/>
+                                    <segment title="Camera"/>
                                 </segments>
                                 <connections>
                                     <action selector="featureSelector:" destination="BYZ-38-t0r" eventType="valueChanged" id="pE5-a3-pSe"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQq-xU-Z7I">
-                                <rect key="frame" x="14" y="213" width="345" height="434"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qan-vP-xND">
-                                <rect key="frame" x="16" y="213" width="343" height="434"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rls-wi-Jss">
-                                <rect key="frame" x="16" y="213" width="343" height="434"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nH-Zv-0NG">
-                                <rect key="frame" x="195" y="81" width="164" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="DELETE EXAMPLES"/>
-                                <connections>
-                                    <action selector="deleteExamplesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfV-Pn-INr"/>
-                                    <action selector="trainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JzG-yM-9F2"/>
-                                </connections>
-                            </button>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEp-27-khG" userLabel="cameraView">
-                                <rect key="frame" x="15" y="213" width="344" height="434"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m36-0t-8ou" userLabel="padsView">
                                 <rect key="frame" x="15" y="213" width="344" height="434"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -196,14 +180,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHe-Lx-DI4" userLabel="CameraView">
+                                <rect key="frame" x="15" y="203" width="344" height="444"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="CameraView" destination="tEp-27-khG" id="odc-CG-kfE"/>
+                        <outlet property="CameraView" destination="xHe-Lx-DI4" id="tHL-K7-W08"/>
                         <outlet property="MotionView" destination="8O8-Gn-CUs" id="d9P-7E-AH6"/>
-                        <outlet property="PadsView" destination="tEp-27-khG" id="iQj-b1-NVL"/>
+                        <outlet property="PadsView" destination="m36-0t-8ou" id="4Yt-eR-vFS"/>
                         <outlet property="accelerometerLabel" destination="Fca-51-PWQ" id="sJt-wv-n2G"/>
                         <outlet property="attitudeLabel" destination="SUW-UV-DIh" id="dFN-h7-sHb"/>
                         <outlet property="hostIP" destination="ECW-YT-ZTe" id="nh4-LJ-tit"/>

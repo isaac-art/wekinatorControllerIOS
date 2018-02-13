@@ -11,7 +11,9 @@ import UIKit
 import SwiftOSC
 import CoreMotion
 import CoreLocation
+import AVFoundation
 
+var client = OSCClient(address: "192.168.0.10", port: 6448)
 let address = OSCAddressPattern("/wek/inputs")
 var timer = Timer()
 var featureSet = "Motion"
@@ -28,7 +30,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
    // @IBOutlet weak var outputNumText: UILabel!
     @IBOutlet weak var PadsView: UIView!
     @IBOutlet weak var MotionView: UIView!
-    @IBOutlet weak var CameraView: UIView!
+    @IBOutlet weak var CameraView: UIImageView!
     
     @IBOutlet weak var accelerometerLabel: UILabel!
     @IBOutlet weak var attitudeLabel: UILabel!
@@ -40,6 +42,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     var motionManager: CMMotionManager!
     let locationManager = CLLocationManager()
     var magHeading = CLLocationDirection()
+    
+    var captureSession: AVCaptureSession?
+    var videoLayer: AVCaptureVideoPreviewLayer?
     
     var xRot = 0.0
     var yRot = 0.0
@@ -73,6 +78,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         
         let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ", "rotationX", "rotationY", "rotationZ", "roll", "pitch", "yaw", "magneticHeading")
         client.send(message)
+        
+        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
+        do {
+            let input = try AVCaptureDeviceInput(device: captureDevice!)
+            captureSession = AVCaptureSession()
+            captureSession?.addInput(input)
+            videoLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+           // videoLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            videoLayer?.frame = view.layer.bounds
+            CameraView.layer.addSublayer(videoLayer!)
+            captureSession?.startRunning()
+        } catch {
+            print(error)
+        }
+        
+        
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading heading: CLHeading) {
@@ -138,8 +160,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         }
         else if(featureSet == "Camera"){
            // print("camera")
+          // do something with camera and send osc messages
+            
         }
     }
+    
     
     //CLAMP clamp(newValue, minValue: 0, maxValue: 1)
     public func clamp<T>(_ value: T, minValue: T, maxValue: T) -> T where T : Comparable {
