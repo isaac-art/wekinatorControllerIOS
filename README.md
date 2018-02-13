@@ -18,7 +18,9 @@ PAD TAB
 * y position
 
 TODO:
-* adding camera input
+* controls to get and select output/class from wekinator
+* add camera input 
+* add audio input
 
 -- REQUIRES [SwiftOSC](https://github.com/devinroth/SwiftOSC)
 
