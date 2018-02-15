@@ -24,6 +24,9 @@ TODO:
 
 -- REQUIRES [SwiftOSC](https://github.com/devinroth/SwiftOSC)
 
+TESTED:
+* ios 11 - iphone 7
+
 
 ![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1333.PNG)
 ![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1334.PNG)
