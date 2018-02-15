@@ -55,6 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.isIdleTimerDisabled = true
         
         MotionView.isHidden = false
         PadsView.isHidden = true
