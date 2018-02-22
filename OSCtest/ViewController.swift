@@ -53,6 +53,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
     var pitch = 0.0
     var yaw = 0.0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -151,9 +152,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
             client.send(message)
         }
         else if(featureSet == "Camera"){
-           // print("camera")
-          // do something with camera and send osc messages
+            let pix = CameraView.image?.pixelData()
+            //print("0: \(pix![0])")
+            //print("1: \(pix![1])")
+            //print(pix!.count)
+            //691200 values in 360x480 color img
             
+            let message = OSCMessage(address,
+                                     Double(pix![0]), Double(pix![30960]),
+                                     Double(pix![61920]), Double(pix![92880]),
+                                     Double(pix![123840]), Double(pix![154800]),
+                                     Double(pix![185760]), Double(pix![216720]),
+                                     Double(pix![247680]), Double(pix![278640]),
+                                     Double(pix![309600]), Double(pix![340560]),
+                                     Double(pix![371520]), Double(pix![402480]),
+                                     Double(pix![433440]), Double(pix![464400]),
+                                     Double(pix![495360]), Double(pix![526420]),
+                                     Double(pix![557380]), Double(pix![558240]))
+            client.send(message)
         }
     }
     
@@ -274,4 +290,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
 //        outputNumText.text = String(Int(sender.value))
 //
 //    }
+}
+
+extension UIImage {
+    func pixelData() -> [UInt8]? {
+        let size = self.size
+        let dataSize = size.width * size.height * 4
+        var pixelData = [UInt8](repeating: 0, count: Int(dataSize))
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        //let colorSpace = CGColorSpaceCreateDeviceGray() use 2*bytesPerRow
+        let context = CGContext(data: &pixelData,
+                                width: Int(size.width),
+                                height: Int(size.height),
+                                bitsPerComponent: 8,
+                                bytesPerRow: 4 * Int(size.width),
+                                space: colorSpace,
+                                bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)
+        guard let cgImage = self.cgImage else { return nil }
+        context?.draw(cgImage, in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        return pixelData
+    }
 }
