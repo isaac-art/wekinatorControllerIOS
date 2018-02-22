@@ -12,6 +12,7 @@
 		6A1D29FD202CA81100B3D161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A1D29FB202CA81100B3D161 /* Main.storyboard */; settings = {ASSET_TAGS = (myTextField, ); }; };
 		6A1D29FF202CA81100B3D161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A1D29FE202CA81100B3D161 /* Assets.xcassets */; };
 		6A1D2A02202CA81100B3D161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A1D2A00202CA81100B3D161 /* LaunchScreen.storyboard */; };
+		6AD98A1D203F27D600D83A9F /* FrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD98A1C203F27D600D83A9F /* FrameExtractor.swift */; };
 		C407157A4D367905E6107D60 /* Pods_OSCtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E50D5A3087E427AE8D1EB0 /* Pods_OSCtest.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		6A1D29FE202CA81100B3D161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A1D2A01202CA81100B3D161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A1D2A03202CA81100B3D161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AD98A1C203F27D600D83A9F /* FrameExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameExtractor.swift; sourceTree = "<group>"; };
 		81AA52EC4750F0D3E71EFF3C /* Pods-OSCtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSCtest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSCtest/Pods-OSCtest.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B05308FFB8965A98E0D8A6 /* Pods-OSCtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSCtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSCtest/Pods-OSCtest.release.xcconfig"; sourceTree = "<group>"; };
 		E8E50D5A3087E427AE8D1EB0 /* Pods_OSCtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSCtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 			children = (
 				6A1D29F7202CA81100B3D161 /* AppDelegate.swift */,
 				6A1D29F9202CA81100B3D161 /* ViewController.swift */,
+				6AD98A1C203F27D600D83A9F /* FrameExtractor.swift */,
 				6A1D29FB202CA81100B3D161 /* Main.storyboard */,
 				6A1D29FE202CA81100B3D161 /* Assets.xcassets */,
 				6A1D2A00202CA81100B3D161 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD98A1D203F27D600D83A9F /* FrameExtractor.swift in Sources */,
 				6A1D29FA202CA81100B3D161 /* ViewController.swift in Sources */,
 				6A1D29F8202CA81100B3D161 /* AppDelegate.swift in Sources */,
 			);

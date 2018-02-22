@@ -18,7 +18,7 @@ let address = OSCAddressPattern("/wek/inputs")
 var timer = Timer()
 var featureSet = "Motion"
 
-class ViewController: UIViewController, CLLocationManagerDelegate{
+class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtractorDelegate{
     
     @IBOutlet weak var recSwitch: UISwitch!
     @IBOutlet weak var runSwitch: UISwitch!
@@ -44,8 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     let locationManager = CLLocationManager()
     var magHeading = CLLocationDirection()
     
-//    var captureSession: AVCaptureSession?
-//    var videoLayer: AVCaptureVideoPreviewLayer?
+    var frameExtractor: FrameExtractor!
     
     var xRot = 0.0
     var yRot = 0.0
@@ -57,6 +56,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        frameExtractor = FrameExtractor()
+        frameExtractor.delegate = self
         
         UIApplication.shared.isIdleTimerDisabled = true
         
@@ -82,21 +83,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         
         let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ", "rotationX", "rotationY", "rotationZ", "roll", "pitch", "yaw", "magneticHeading")
         client.send(message)
-        
-//        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
-//        do {
-//            let input = try AVCaptureDeviceInput(device: captureDevice!)
-//            captureSession = AVCaptureSession()
-//            captureSession?.addInput(input)
-//            videoLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-//           // videoLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-//            videoLayer?.frame = view.layer.bounds
-//            CameraView.layer.addSublayer(videoLayer!)
-//            captureSession?.startRunning()
-//        } catch {
-//            print(error)
-//        }
-        
+ 
         let ms = Int(1000/rateSlider.value)
         rateLabel.text = String("\(ms)ms" )
         
@@ -276,6 +263,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         scheduledTimerWithTimeInterval()
     }
     
+    
+    func captured(image: UIImage) {
+        CameraView.image = image
+    }
+            
 //    @IBAction func switchOutput(_ sender: UIStepper) {
 //        let message = OSCMessage(OSCAddressPattern("/wekinator/control/outputs"), sender.value)
 //        client.send(message)

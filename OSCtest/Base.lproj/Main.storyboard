@@ -96,6 +96,7 @@
                                 <segments>
                                     <segment title="Motion"/>
                                     <segment title="Pad"/>
+                                    <segment title="Camera"/>
                                 </segments>
                                 <connections>
                                     <action selector="featureSelector:" destination="BYZ-38-t0r" eventType="valueChanged" id="pE5-a3-pSe"/>
@@ -178,9 +179,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHe-Lx-DI4" userLabel="CameraView">
-                                <rect key="frame" x="16" y="253" width="344" height="394"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHe-Lx-DI4" userLabel="CameraView">
+                                <rect key="frame" x="16" y="263" width="344" height="384"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="LT2-Jm-s1e">
                                 <rect key="frame" x="16" y="171" width="249" height="30"/>
