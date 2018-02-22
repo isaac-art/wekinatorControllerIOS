@@ -7,4 +7,5 @@ target 'OSCtest' do
 
   # Pods for OSCtest
   pod 'SwiftOSC', '~> 1.1'
+  pod "ViewAnimator"
 end

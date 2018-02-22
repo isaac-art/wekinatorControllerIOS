@@ -13,7 +13,7 @@ import CoreMotion
 import CoreLocation
 import AVFoundation
 
-var client = OSCClient(address: "192.168.0.10", port: 6448)
+var client = OSCClient(address: "10.100.26.237", port: 6448)
 let address = OSCAddressPattern("/wek/inputs")
 var timer = Timer()
 var featureSet = "Motion"
@@ -26,6 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var runningLabel: UILabel!
     @IBOutlet weak var trainingButton: UIButton!
     @IBOutlet weak var hostIP: UITextField!
+    @IBOutlet weak var rateSlider: UISlider!
     @IBOutlet weak var hostPort: UITextField!
    // @IBOutlet weak var outputNumText: UILabel!
     @IBOutlet weak var PadsView: UIView!
@@ -36,7 +37,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var attitudeLabel: UILabel!
     @IBOutlet weak var rotationLabel: UILabel!
     @IBOutlet weak var magneticHeadingLabel: UILabel!
-    
+    @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var pointer: UIImageView!
     
     var motionManager: CMMotionManager!
@@ -55,6 +56,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         UIApplication.shared.isIdleTimerDisabled = true
         
         MotionView.isHidden = false
@@ -94,7 +97,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
 //            print(error)
 //        }
         
-        
+        let ms = Int(1000/rateSlider.value)
+        rateLabel.text = String("\(ms)ms" )
         
     }
     
@@ -104,7 +108,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     func scheduledTimerWithTimeInterval(){
         //update 30 times a second for motion
-        timer = Timer.scheduledTimer(timeInterval: 1.0/30.0, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: Double(1.0/rateSlider.value), target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
     }
     @objc func updateCounting(){
         if(featureSet == "Motion"){
@@ -265,6 +269,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     }
     
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        let ms = Int(1000/rateSlider.value)
+        rateLabel.text = String("\(ms)ms" )
+        timer.invalidate()
+        scheduledTimerWithTimeInterval()
+    }
     
 //    @IBAction func switchOutput(_ sender: UIStepper) {
 //        let message = OSCMessage(OSCAddressPattern("/wekinator/control/outputs"), sender.value)

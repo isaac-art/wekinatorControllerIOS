@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BFCE111FF80206D38CCF84360A6DE36A'
-               BlueprintName = 'SwiftOSC'
+               BlueprintIdentifier = 'F2E070DF8E3952A3D6532EC1E16C554B'
+               BlueprintName = 'ViewAnimator'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftOSC.framework'>
+               BuildableName = 'ViewAnimator.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

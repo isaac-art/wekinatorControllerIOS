@@ -1,12 +1,15 @@
 PODS:
   - SwiftOSC (1.1.3)
+  - ViewAnimator (1.0.4)
 
 DEPENDENCIES:
   - SwiftOSC (~> 1.1)
+  - ViewAnimator
 
 SPEC CHECKSUMS:
   SwiftOSC: e763d221d79328890781ad4eaf70f8eb5d80d50b
+  ViewAnimator: 1f3fa25f3c9010ab0dda06cf9e3e49a4b55834ff
 
-PODFILE CHECKSUM: 2b8f15bf3607a01d3f958e7a927f21484948fb7e
+PODFILE CHECKSUM: de1f91611c01b4a01bf9e9ba2a368e9778cf4d22
 
 COCOAPODS: 1.4.0
