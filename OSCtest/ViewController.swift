@@ -13,7 +13,7 @@ import CoreMotion
 import CoreLocation
 import AVFoundation
 
-var client = OSCClient(address: "10.100.26.237", port: 6448)
+var client = OSCClient(address: "192.168.0.10", port: 6448)
 let address = OSCAddressPattern("/wek/inputs")
 var timer = Timer()
 var featureSet = "Motion"
@@ -53,6 +53,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
     var pitch = 0.0
     var yaw = 0.0
     
+    @IBOutlet weak var accSwitch: UISwitch!
+    @IBOutlet weak var attSwitch: UISwitch!
+    @IBOutlet weak var rotSwitch: UISwitch!
+    @IBOutlet weak var magSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,14 +136,43 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
                     mappedMagHeading = clamp((magHeading/360), minValue:0.0, maxValue:1.0)
                 }
                 //send osc message
-                let message = OSCMessage(address, xVal, yVal, zVal, xRot, yRot, zRot, roll, pitch, yaw, mappedMagHeading)
+                let message = OSCMessage(address)
+                
+                if(accSwitch.isOn){
+                    message.add(xVal, yVal, zVal)
+                }
+                if(rotSwitch.isOn){
+                    message.add( xRot, yRot, zRot)
+                }
+                if(attSwitch.isOn){
+                    message.add(roll, pitch, yaw)
+                }
+                if(magSwitch.isOn){
+                    message.add(mappedMagHeading)
+                }
+                    
                 client.send(message)
                 
-                accelerometerLabel.text = "x: \(xVal) \ny: \(yVal) \nz: \(zVal) "
-                attitudeLabel.text = "roll: \(roll) \npitch: \(pitch) \nyaw: \(yaw)"
-                rotationLabel.text = "x: \(xRot) \ny: \(yRot) \nz: \(zRot)"
-                magneticHeadingLabel.text = "\(magHeading)"
-                
+                if(accSwitch.isOn){
+                    accelerometerLabel.text = "x: \(xVal) \ny: \(yVal) \nz: \(zVal) "
+                }else{
+                    accelerometerLabel.text = "off"
+                }
+                if(attSwitch.isOn){
+                    attitudeLabel.text = "roll: \(roll) \npitch: \(pitch) \nyaw: \(yaw)"
+                }else{
+                     attitudeLabel.text = "off"
+                }
+                if(rotSwitch.isOn){
+                    rotationLabel.text = "x: \(xRot) \ny: \(yRot) \nz: \(zRot)"
+                }else{
+                    rotationLabel.text = "off"
+                }
+                if(magSwitch.isOn){
+                    magneticHeadingLabel.text = "\(magHeading)"
+                }else{
+                    magneticHeadingLabel.text = "off"
+                }
             }
         }
         else if(featureSet == "Pad"){
