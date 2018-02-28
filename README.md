@@ -17,17 +17,16 @@ PAD TAB
 * x position
 * y position
 
-TODO:
-* controls to get and select output/class from wekinator
-* add camera input 
-* add audio input
+CAMERA TAB
+* example of 20 values from camera
 
 -- REQUIRES [SwiftOSC](https://github.com/devinroth/SwiftOSC)
 
 TESTED:
-* ios 11 - iphone 7
+* ios 11.3(beta) - iphone 7
 
 
-![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1333.PNG)
-![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1334.PNG)
+![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1392.PNG)
+![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1393.PNG)
+![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/IMG_1394.PNG)
 ![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/screenshots/dataPlotterExample2.png)
