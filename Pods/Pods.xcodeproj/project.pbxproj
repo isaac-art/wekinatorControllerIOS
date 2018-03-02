@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C2148C9ED8EB60889946A3A0E08047 /* SwiftOSC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57556D83F868B219B7F719DFA52BDE81 /* SwiftOSC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00C2148C9ED8EB60889946A3A0E08047 /* SwiftOSC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9338865938D4F7EEEE5A906C556F4B4 /* SwiftOSC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		010D204A3E188EF1A88976CFADD5CB75 /* OSCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7BDFF40BCCB6194F08FB8CC036947 /* OSCClient.swift */; };
 		0BDC1B65B7F3F8DCAC1FDD0CE0081DE0 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448EF9A06507AF0766491DA54C5EC1B6 /* Timer.swift */; };
-		0DC822BC87B6C06762726F58A4AFD0A3 /* Pods-OSCtest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28615BC85DC46C2A1D567928B2AC1364 /* Pods-OSCtest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DC822BC87B6C06762726F58A4AFD0A3 /* Pods-OSCtest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E05DA6991CC7DE1C67C64AE32EAD5CD8 /* Pods-OSCtest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF1EF37E3BB385EB0DC2A9E956E78F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		0EF1F1E45054C569E45CB66903F1DC72 /* SwiftOSC.h in Headers */ = {isa = PBXBuildFile; fileRef = A8D270519AA73C266E8FD31CC2323A55 /* SwiftOSC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12374D89B887EFF6C231414B00BCAF54 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AC717F255DA6B1B2322E1065D6CB6 /* Extensions.swift */; };
@@ -31,18 +31,18 @@
 		835C093213BDE03E43232D59CAF3480A /* Timetag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C933C73769B9F41118F478266FF8A6D /* Timetag.swift */; };
 		84FF3D52DB28DDD7DE5BD20EB1B0DDC8 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE49CC1393CC355C259FA5772A63C9 /* Direction.swift */; };
 		9220ECDDC937360BC92B3E6B677B3F77 /* ViewAnimatorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615EF2562240237E35222DE683B75DC /* ViewAnimatorConfig.swift */; };
-		972935B638FF0D297BC94DC2EC3D597F /* SwiftOSC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D20EDA4F6927D1F6D72CA4169845B94 /* SwiftOSC-dummy.m */; };
+		972935B638FF0D297BC94DC2EC3D597F /* SwiftOSC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0960B35D81C42527460FA3F33B3590 /* SwiftOSC-dummy.m */; };
 		A0934FCAE526E7D9AD2F7790AFE1C73B /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC290744405C3CED83EAA8063292B4 /* AnimationType.swift */; };
 		A8934470454A4DA7EB2BD83A02B154E0 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D031CA023E4820A23DE61EB0888C53 /* ysocket.swift */; };
 		B16414D9C61FAD9DAE3732EA522782B2 /* OSCAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62292A72346BD22839A556421C07BF6D /* OSCAddress.swift */; };
 		B765211D6546BFEFE5C5A5AD6F8E6DBB /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147C897CB20C55DFB7EED693EFC6EFB3 /* Int.swift */; };
-		C5430DA898914C97A50A9587BC76391B /* ViewAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B977056C4438E00F7149557393305 /* ViewAnimator-dummy.m */; };
-		CC2BD3D4E16121662B4B7FC0F72CE91B /* ViewAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA27E4E425F8788BF788668FA991A49 /* ViewAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5430DA898914C97A50A9587BC76391B /* ViewAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFDCB7C0938F8AD0D3B869B9A283DB1 /* ViewAnimator-dummy.m */; };
+		CC2BD3D4E16121662B4B7FC0F72CE91B /* ViewAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A059A026807E8909E26B1F4A4CC1A58 /* ViewAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE383C9DBA013827C34B6E04BAEC19D8 /* OSCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7BE8FD8CB3C1BC31F2EC4D1B8ABA3F /* OSCServer.swift */; };
 		E62B02CE2452FA05495DEEBE9C034692 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858402BCA17BD50A62391A89E1941CAD /* Blob.swift */; };
 		E684D9E8ED5AE5CD4F7EC7AEE2449376 /* OSCAddressPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2EAAE7DE0B9CC1A64C68990F0DFC8 /* OSCAddressPattern.swift */; };
 		E85BD5197E3E054172DE1FF96E57ABA0 /* OSCTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CBF1645DF0784F55FEA9B87551DFF /* OSCTypeProtocol.swift */; };
-		EA3806C15376299B8D050FC402999FFE /* Pods-OSCtest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A701D6E6812962A5BAAAE5EC877ED99 /* Pods-OSCtest-dummy.m */; };
+		EA3806C15376299B8D050FC402999FFE /* Pods-OSCtest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B951C7AFF977D0269AA4BB4C814909FA /* Pods-OSCtest-dummy.m */; };
 		EEA752359BBB92AA3DA911EFAC813736 /* OSCBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816990104EBA355FED923CAC2A71AD0C /* OSCBundle.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,61 +64,61 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		092B5A6DF79D5FF369B62F00326F4C39 /* Pods-OSCtest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSCtest-resources.sh"; sourceTree = "<group>"; };
 		147C897CB20C55DFB7EED693EFC6EFB3 /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Int.swift; path = Framework/SwiftOSC/Types/Int.swift; sourceTree = "<group>"; };
 		1BA1164D6B7912BFCFE87F399D2EC000 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = Framework/SwiftOSC/Types/String.swift; sourceTree = "<group>"; };
 		26FC290744405C3CED83EAA8063292B4 /* AnimationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationType.swift; path = ViewAnimator/Classes/AnimationType.swift; sourceTree = "<group>"; };
-		28615BC85DC46C2A1D567928B2AC1364 /* Pods-OSCtest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OSCtest-umbrella.h"; sourceTree = "<group>"; };
-		2A83A11397FA88E26831524D7A60427E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AFDCB7C0938F8AD0D3B869B9A283DB1 /* ViewAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ViewAnimator-dummy.m"; sourceTree = "<group>"; };
 		2C933C73769B9F41118F478266FF8A6D /* Timetag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timetag.swift; path = Framework/SwiftOSC/Types/Timetag.swift; sourceTree = "<group>"; };
 		2CD3A32A529A6F117DCA5EDB9637E6AE /* yudpsocket.c */ = {isa = PBXFileReference; includeInIndex = 1; name = yudpsocket.c; path = Framework/SwiftOSC/Communication/ysocket/yudpsocket.c; sourceTree = "<group>"; };
 		2EB844EFB49ECA1C10A03EE9352FFC1B /* Float.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Float.swift; path = Framework/SwiftOSC/Types/Float.swift; sourceTree = "<group>"; };
 		2F7BE8FD8CB3C1BC31F2EC4D1B8ABA3F /* OSCServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCServer.swift; path = Framework/SwiftOSC/Communication/OSCServer.swift; sourceTree = "<group>"; };
+		315B0FC0CD25A95AF96C2E893BFE23E4 /* SwiftOSC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftOSC.modulemap; sourceTree = "<group>"; };
 		3B317E0DB1437D5FE2DFA47347ABF674 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = ViewAnimator/Classes/Animation.swift; sourceTree = "<group>"; };
 		3B99D9C28A77B854033F02ACCEB0D5B3 /* yudpsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = yudpsocket.swift; path = Framework/SwiftOSC/Communication/ysocket/yudpsocket.swift; sourceTree = "<group>"; };
-		3D3B977056C4438E00F7149557393305 /* ViewAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ViewAnimator-dummy.m"; sourceTree = "<group>"; };
 		448EF9A06507AF0766491DA54C5EC1B6 /* Timer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Framework/SwiftOSC/Helpers/Timer.swift; sourceTree = "<group>"; };
+		453D7D794CD5359F91616EDBFC247465 /* ViewAnimator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ViewAnimator.xcconfig; sourceTree = "<group>"; };
 		46F2EAAE7DE0B9CC1A64C68990F0DFC8 /* OSCAddressPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCAddressPattern.swift; path = Framework/SwiftOSC/Addresses/OSCAddressPattern.swift; sourceTree = "<group>"; };
-		502491D07DFD2EAFE70FF505769E51C5 /* ViewAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ViewAnimator.modulemap; sourceTree = "<group>"; };
+		4C91077D594B797CBCCF03A478E55F60 /* Pods-OSCtest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSCtest-resources.sh"; sourceTree = "<group>"; };
 		5303C3B688146658BBB3FA1157D29937 /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ViewAnimator/Classes/Utilities.swift; sourceTree = "<group>"; };
-		57556D83F868B219B7F719DFA52BDE81 /* SwiftOSC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOSC-umbrella.h"; sourceTree = "<group>"; };
-		5D20EDA4F6927D1F6D72CA4169845B94 /* SwiftOSC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOSC-dummy.m"; sourceTree = "<group>"; };
-		5F938C2AFD57056E7654CC5B43E57BF3 /* SwiftOSC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftOSC.modulemap; sourceTree = "<group>"; };
 		61A7BDFF40BCCB6194F08FB8CC036947 /* OSCClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCClient.swift; path = Framework/SwiftOSC/Communication/OSCClient.swift; sourceTree = "<group>"; };
 		62292A72346BD22839A556421C07BF6D /* OSCAddress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCAddress.swift; path = Framework/SwiftOSC/Addresses/OSCAddress.swift; sourceTree = "<group>"; };
-		626891CAFC6D15E4CCEC25282FFE5DDA /* Pods-OSCtest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OSCtest-acknowledgements.plist"; sourceTree = "<group>"; };
+		626B531BB39635B0CBA95F868199C84A /* Pods-OSCtest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OSCtest-acknowledgements.plist"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		662AC717F255DA6B1B2322E1065D6CB6 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Framework/SwiftOSC/Helpers/Extensions.swift; sourceTree = "<group>"; };
 		68107DB7EEC02CE9EB815A5C0E0CA07A /* Impulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Impulse.swift; path = Framework/SwiftOSC/Types/Impulse.swift; sourceTree = "<group>"; };
-		6E6DE467F3DD7D8DFAF07B9C4FD18C70 /* Pods-OSCtest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-OSCtest.modulemap"; sourceTree = "<group>"; };
-		76D61C30889E48BCADCD716BA96404AF /* Pods-OSCtest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OSCtest-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7A701D6E6812962A5BAAAE5EC877ED99 /* Pods-OSCtest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OSCtest-dummy.m"; sourceTree = "<group>"; };
+		6A059A026807E8909E26B1F4A4CC1A58 /* ViewAnimator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewAnimator-umbrella.h"; sourceTree = "<group>"; };
 		7FC3F69EE7993DB9707C6D0CCC3DFC30 /* Bool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bool.swift; path = Framework/SwiftOSC/Types/Bool.swift; sourceTree = "<group>"; };
 		800ED236823979C8D765273A129432D0 /* OSCElementProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCElementProtocol.swift; path = Framework/SwiftOSC/Elements/OSCElementProtocol.swift; sourceTree = "<group>"; };
 		816990104EBA355FED923CAC2A71AD0C /* OSCBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCBundle.swift; path = Framework/SwiftOSC/Elements/OSCBundle.swift; sourceTree = "<group>"; };
 		858402BCA17BD50A62391A89E1941CAD /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Framework/SwiftOSC/Types/Blob.swift; sourceTree = "<group>"; };
 		8615EF2562240237E35222DE683B75DC /* ViewAnimatorConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnimatorConfig.swift; path = ViewAnimator/Classes/ViewAnimatorConfig.swift; sourceTree = "<group>"; };
-		898A7DB067E307E5C6A3470B0ED79A48 /* Pods-OSCtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSCtest.debug.xcconfig"; sourceTree = "<group>"; };
+		8C884FE725B50C1F1CDEC2B9D5C15F58 /* Pods-OSCtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSCtest.release.xcconfig"; sourceTree = "<group>"; };
+		8CD8A964FD57B7035AE4845BC0AC31FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E04616D84A5B67BEBC9C9953A2C0004 /* Pods_OSCtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OSCtest.framework; path = "Pods-OSCtest.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99D4B71B64333662D77CD53390D7F16D /* SwiftOSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftOSC.framework; path = SwiftOSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E02BF921A773414D47420760B2486A3 /* OSCMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCMessage.swift; path = Framework/SwiftOSC/Elements/OSCMessage.swift; sourceTree = "<group>"; };
-		9EDDF30673E0181C8C7AA9FCFED53708 /* SwiftOSC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftOSC.xcconfig; sourceTree = "<group>"; };
-		A3F4D92A711BC4B86F40052D4792115C /* Pods-OSCtest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSCtest-frameworks.sh"; sourceTree = "<group>"; };
+		9E27FF9690E920B698CDEC65CA45249C /* SwiftOSC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOSC-prefix.pch"; sourceTree = "<group>"; };
+		A22AD58E6979F2736873B7E0789BEDE7 /* ViewAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ViewAnimator.modulemap; sourceTree = "<group>"; };
 		A50CBF1645DF0784F55FEA9B87551DFF /* OSCTypeProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSCTypeProtocol.swift; path = Framework/SwiftOSC/Types/OSCTypeProtocol.swift; sourceTree = "<group>"; };
-		A73A37E9704387C3B866EB8E38D98704 /* ViewAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewAnimator-prefix.pch"; sourceTree = "<group>"; };
+		A8B530AAD0714496FD39BD45CC046698 /* Pods-OSCtest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSCtest-frameworks.sh"; sourceTree = "<group>"; };
 		A8D270519AA73C266E8FD31CC2323A55 /* SwiftOSC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftOSC.h; path = Framework/iOS/SwiftOSC.h; sourceTree = "<group>"; };
+		AB6C87726618ECAF01C2B77A7417B40D /* ViewAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewAnimator-prefix.pch"; sourceTree = "<group>"; };
 		B51F1DADEB121478D7D742AE81523BFA /* ViewAnimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ViewAnimator.framework; path = ViewAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B71DB49D0EE861D2D3299A37A62D2B72 /* Pods-OSCtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSCtest.release.xcconfig"; sourceTree = "<group>"; };
-		B99E2DDEB46BF549096DB7BCD13842C8 /* ViewAnimator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ViewAnimator.xcconfig; sourceTree = "<group>"; };
+		B951C7AFF977D0269AA4BB4C814909FA /* Pods-OSCtest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OSCtest-dummy.m"; sourceTree = "<group>"; };
+		BC4636B24746530EAEEFB48B008B5C0D /* Pods-OSCtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSCtest.debug.xcconfig"; sourceTree = "<group>"; };
+		BDD4C6F69A6C50533AB985DD44A7F59F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C276C4C059B091AD95FB0C0981B75E37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0BE49CC1393CC355C259FA5772A63C9 /* Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = ViewAnimator/Classes/Direction.swift; sourceTree = "<group>"; };
-		D9188874DB4EBF4038552822D385FD17 /* SwiftOSC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOSC-prefix.pch"; sourceTree = "<group>"; };
+		D4F54CE63389AA809E2041A4C375A31C /* Pods-OSCtest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OSCtest.modulemap"; sourceTree = "<group>"; };
+		DA67D701F919F07DD5ECE0533EA90AF1 /* Pods-OSCtest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OSCtest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E05DA6991CC7DE1C67C64AE32EAD5CD8 /* Pods-OSCtest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OSCtest-umbrella.h"; sourceTree = "<group>"; };
+		E155814E2378BF3C6253E4393BA5F767 /* SwiftOSC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftOSC.xcconfig; sourceTree = "<group>"; };
 		E67F20301086DE36802FBBF467224546 /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animatable.swift; path = ViewAnimator/Classes/Animatable.swift; sourceTree = "<group>"; };
+		E9338865938D4F7EEEE5A906C556F4B4 /* SwiftOSC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOSC-umbrella.h"; sourceTree = "<group>"; };
 		E9D031CA023E4820A23DE61EB0888C53 /* ysocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ysocket.swift; path = Framework/SwiftOSC/Communication/ysocket/ysocket.swift; sourceTree = "<group>"; };
-		EB75F62B5F0EBFF9BA8917A2FA7366E8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F94DB123924599A9D68D8DB5FB15929A /* ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnimator.swift; path = ViewAnimator/Classes/ViewAnimator.swift; sourceTree = "<group>"; };
-		FE0C4CA4AFEC466D5F411E9AB9A8DE10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFA27E4E425F8788BF788668FA991A49 /* ViewAnimator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewAnimator-umbrella.h"; sourceTree = "<group>"; };
+		FA0960B35D81C42527460FA3F33B3590 /* SwiftOSC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOSC-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +159,7 @@
 				5303C3B688146658BBB3FA1157D29937 /* Utilities.swift */,
 				F94DB123924599A9D68D8DB5FB15929A /* ViewAnimator.swift */,
 				8615EF2562240237E35222DE683B75DC /* ViewAnimatorConfig.swift */,
-				AE0241A41A66CA38FF25E7634FA172BB /* Support Files */,
+				3DDB70FDFD9175C770662AD82CBACBBB /* Support Files */,
 			);
 			name = ViewAnimator;
 			path = ViewAnimator;
@@ -189,10 +189,38 @@
 				E9D031CA023E4820A23DE61EB0888C53 /* ysocket.swift */,
 				2CD3A32A529A6F117DCA5EDB9637E6AE /* yudpsocket.c */,
 				3B99D9C28A77B854033F02ACCEB0D5B3 /* yudpsocket.swift */,
-				F86E655CCE821C2267A0B23E3EB39E56 /* Support Files */,
+				317BBC0DF630E551E4A90972A3AC6590 /* Support Files */,
 			);
 			name = SwiftOSC;
 			path = SwiftOSC;
+			sourceTree = "<group>";
+		};
+		317BBC0DF630E551E4A90972A3AC6590 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C276C4C059B091AD95FB0C0981B75E37 /* Info.plist */,
+				315B0FC0CD25A95AF96C2E893BFE23E4 /* SwiftOSC.modulemap */,
+				E155814E2378BF3C6253E4393BA5F767 /* SwiftOSC.xcconfig */,
+				FA0960B35D81C42527460FA3F33B3590 /* SwiftOSC-dummy.m */,
+				9E27FF9690E920B698CDEC65CA45249C /* SwiftOSC-prefix.pch */,
+				E9338865938D4F7EEEE5A906C556F4B4 /* SwiftOSC-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftOSC";
+			sourceTree = "<group>";
+		};
+		3DDB70FDFD9175C770662AD82CBACBBB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CD8A964FD57B7035AE4845BC0AC31FD /* Info.plist */,
+				A22AD58E6979F2736873B7E0789BEDE7 /* ViewAnimator.modulemap */,
+				453D7D794CD5359F91616EDBFC247465 /* ViewAnimator.xcconfig */,
+				2AFDCB7C0938F8AD0D3B869B9A283DB1 /* ViewAnimator-dummy.m */,
+				AB6C87726618ECAF01C2B77A7417B40D /* ViewAnimator-prefix.pch */,
+				6A059A026807E8909E26B1F4A4CC1A58 /* ViewAnimator-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ViewAnimator";
 			sourceTree = "<group>";
 		};
 		5FDD3AD3CC305DB9B2773ABA88D523C4 /* Products */ = {
@@ -205,24 +233,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		611F1F97E817171958DE49B3A785583E /* Pods-OSCtest */ = {
-			isa = PBXGroup;
-			children = (
-				2A83A11397FA88E26831524D7A60427E /* Info.plist */,
-				6E6DE467F3DD7D8DFAF07B9C4FD18C70 /* Pods-OSCtest.modulemap */,
-				76D61C30889E48BCADCD716BA96404AF /* Pods-OSCtest-acknowledgements.markdown */,
-				626891CAFC6D15E4CCEC25282FFE5DDA /* Pods-OSCtest-acknowledgements.plist */,
-				7A701D6E6812962A5BAAAE5EC877ED99 /* Pods-OSCtest-dummy.m */,
-				A3F4D92A711BC4B86F40052D4792115C /* Pods-OSCtest-frameworks.sh */,
-				092B5A6DF79D5FF369B62F00326F4C39 /* Pods-OSCtest-resources.sh */,
-				28615BC85DC46C2A1D567928B2AC1364 /* Pods-OSCtest-umbrella.h */,
-				898A7DB067E307E5C6A3470B0ED79A48 /* Pods-OSCtest.debug.xcconfig */,
-				B71DB49D0EE861D2D3299A37A62D2B72 /* Pods-OSCtest.release.xcconfig */,
-			);
-			name = "Pods-OSCtest";
-			path = "Target Support Files/Pods-OSCtest";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -232,20 +242,6 @@
 				5FDD3AD3CC305DB9B2773ABA88D523C4 /* Products */,
 				D374DBB1218F333257001FA6A4004787 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		AE0241A41A66CA38FF25E7634FA172BB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EB75F62B5F0EBFF9BA8917A2FA7366E8 /* Info.plist */,
-				502491D07DFD2EAFE70FF505769E51C5 /* ViewAnimator.modulemap */,
-				B99E2DDEB46BF549096DB7BCD13842C8 /* ViewAnimator.xcconfig */,
-				3D3B977056C4438E00F7149557393305 /* ViewAnimator-dummy.m */,
-				A73A37E9704387C3B866EB8E38D98704 /* ViewAnimator-prefix.pch */,
-				FFA27E4E425F8788BF788668FA991A49 /* ViewAnimator-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ViewAnimator";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -276,23 +272,27 @@
 		D374DBB1218F333257001FA6A4004787 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				611F1F97E817171958DE49B3A785583E /* Pods-OSCtest */,
+				F4677BE43C26BE4AF4D6FA83C7C438F9 /* Pods-OSCtest */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F86E655CCE821C2267A0B23E3EB39E56 /* Support Files */ = {
+		F4677BE43C26BE4AF4D6FA83C7C438F9 /* Pods-OSCtest */ = {
 			isa = PBXGroup;
 			children = (
-				FE0C4CA4AFEC466D5F411E9AB9A8DE10 /* Info.plist */,
-				5F938C2AFD57056E7654CC5B43E57BF3 /* SwiftOSC.modulemap */,
-				9EDDF30673E0181C8C7AA9FCFED53708 /* SwiftOSC.xcconfig */,
-				5D20EDA4F6927D1F6D72CA4169845B94 /* SwiftOSC-dummy.m */,
-				D9188874DB4EBF4038552822D385FD17 /* SwiftOSC-prefix.pch */,
-				57556D83F868B219B7F719DFA52BDE81 /* SwiftOSC-umbrella.h */,
+				BDD4C6F69A6C50533AB985DD44A7F59F /* Info.plist */,
+				D4F54CE63389AA809E2041A4C375A31C /* Pods-OSCtest.modulemap */,
+				DA67D701F919F07DD5ECE0533EA90AF1 /* Pods-OSCtest-acknowledgements.markdown */,
+				626B531BB39635B0CBA95F868199C84A /* Pods-OSCtest-acknowledgements.plist */,
+				B951C7AFF977D0269AA4BB4C814909FA /* Pods-OSCtest-dummy.m */,
+				A8B530AAD0714496FD39BD45CC046698 /* Pods-OSCtest-frameworks.sh */,
+				4C91077D594B797CBCCF03A478E55F60 /* Pods-OSCtest-resources.sh */,
+				E05DA6991CC7DE1C67C64AE32EAD5CD8 /* Pods-OSCtest-umbrella.h */,
+				BC4636B24746530EAEEFB48B008B5C0D /* Pods-OSCtest.debug.xcconfig */,
+				8C884FE725B50C1F1CDEC2B9D5C15F58 /* Pods-OSCtest.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftOSC";
+			name = "Pods-OSCtest";
+			path = "Target Support Files/Pods-OSCtest";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,8 +385,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -479,7 +479,7 @@
 /* Begin XCBuildConfiguration section */
 		026103DCA176AABF4426299B85C5E5ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EDDF30673E0181C8C7AA9FCFED53708 /* SwiftOSC.xcconfig */;
+			baseConfigurationReference = E155814E2378BF3C6253E4393BA5F767 /* SwiftOSC.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -511,7 +511,7 @@
 		};
 		050125F07F2491A7C42B42F07732EAE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B99E2DDEB46BF549096DB7BCD13842C8 /* ViewAnimator.xcconfig */;
+			baseConfigurationReference = 453D7D794CD5359F91616EDBFC247465 /* ViewAnimator.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -540,41 +540,7 @@
 			};
 			name = Debug;
 		};
-		0A3CDBDE12D058B287C64EF206791597 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B71DB49D0EE861D2D3299A37A62D2B72 /* Pods-OSCtest.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OSCtest/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OSCtest/Pods-OSCtest.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_OSCtest;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		12C4B864767C59600DBFA238F1E2F8BC /* Release */ = {
+		13A95306D85E4471AB6BE665B012E60A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -584,10 +550,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -595,61 +563,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		59F0302F2371FCC6B73EF0A418D40734 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -689,10 +603,11 @@
 			};
 			name = Debug;
 		};
-		7FCBF7CB157207C5E40B665FDE218B47 /* Debug */ = {
+		1C33BAB9F70E357E3C14D23F773D6391 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 898A7DB067E307E5C6A3470B0ED79A48 /* Pods-OSCtest.debug.xcconfig */;
+			baseConfigurationReference = BC4636B24746530EAEEFB48B008B5C0D /* Pods-OSCtest.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -723,9 +638,44 @@
 			};
 			name = Debug;
 		};
+		825F3789BEB2D9051BDFB6CC6BBD7AC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C884FE725B50C1F1CDEC2B9D5C15F58 /* Pods-OSCtest.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OSCtest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OSCtest/Pods-OSCtest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OSCtest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8E3227579775FDC405D7F0AD4C33CB45 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B99E2DDEB46BF549096DB7BCD13842C8 /* ViewAnimator.xcconfig */;
+			baseConfigurationReference = 453D7D794CD5359F91616EDBFC247465 /* ViewAnimator.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -755,9 +705,67 @@
 			};
 			name = Release;
 		};
+		8E8333274F4AB64785B04AB5B2A37231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
 		FA3EA66E80EFD0E1EC66680FC43DE6C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EDDF30673E0181C8C7AA9FCFED53708 /* SwiftOSC.xcconfig */;
+			baseConfigurationReference = E155814E2378BF3C6253E4393BA5F767 /* SwiftOSC.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -810,8 +818,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59F0302F2371FCC6B73EF0A418D40734 /* Debug */,
-				12C4B864767C59600DBFA238F1E2F8BC /* Release */,
+				13A95306D85E4471AB6BE665B012E60A /* Debug */,
+				8E8333274F4AB64785B04AB5B2A37231 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -819,8 +827,8 @@
 		927F74C51B8A2812C0FBD5C3EE72C073 /* Build configuration list for PBXNativeTarget "Pods-OSCtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FCBF7CB157207C5E40B665FDE218B47 /* Debug */,
-				0A3CDBDE12D058B287C64EF206791597 /* Release */,
+				1C33BAB9F70E357E3C14D23F773D6391 /* Debug */,
+				825F3789BEB2D9051BDFB6CC6BBD7AC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
