@@ -3,7 +3,7 @@
 //  OSCtest
 //
 //  Created by Isaac Clarke on 08/02/2018.
-//  For use with Wekinator created by Rebecca Fiebrink: http://www.wekinator.org/
+//  THIS BRANCH IS NOT FOR WEKINATOR !!!!!
 //
 //
 
@@ -14,17 +14,13 @@ import CoreLocation
 import AVFoundation
 
 var client = OSCClient(address: "192.168.0.10", port: 6448)
-let address = OSCAddressPattern("/wek/inputs")
+let address = OSCAddressPattern("/")
 var timer = Timer()
 var featureSet = "Motion"
 
 class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtractorDelegate{
     
-    @IBOutlet weak var recSwitch: UISwitch!
-    @IBOutlet weak var runSwitch: UISwitch!
-    @IBOutlet weak var recordingLabel: UILabel!
-    @IBOutlet weak var runningLabel: UILabel!
-    @IBOutlet weak var trainingButton: UIButton!
+
     @IBOutlet weak var hostIP: UITextField!
     @IBOutlet weak var rateSlider: UISlider!
     @IBOutlet weak var hostPort: UITextField!
@@ -69,8 +65,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
         MotionView.isHidden = false
         PadsView.isHidden = true
         CameraView.isHidden = true
-        recSwitch.setOn(false, animated: false)
-        runSwitch.setOn(false, animated: false)
         //outputNumText.text = "1"
         
         scheduledTimerWithTimeInterval()
@@ -86,8 +80,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
             locationManager.delegate = self
         }
         
-        let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ", "rotationX", "rotationY", "rotationZ", "roll", "pitch", "yaw", "magneticHeading")
-        client.send(message)
+//        let message = OSCMessage(OSCAddressPattern("/wekinator/control/setInputNames"), "accelerometerX", "accelerometerY", "accelerometerZ", "rotationX", "rotationY", "rotationZ", "roll", "pitch", "yaw", "magneticHeading")
+//        client.send(message)
  
         let ms = Int(1000/rateSlider.value)
         rateLabel.text = String("\(ms)ms" )
@@ -240,40 +234,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
     }
     
 
-    @IBAction func toggleRecording(_ sender: UISwitch) {
-        if(sender.isOn){
-            let message = OSCMessage(OSCAddressPattern("/wekinator/control/startRecording"), 1)
-            client.send(message)
-            recordingLabel.text = "RECORDING"
-        }else{
-            let message = OSCMessage(OSCAddressPattern("/wekinator/control/stopRecording"), 1)
-            client.send(message)
-            recordingLabel.text = "RECORD"
-        }
-    }
-    
-    @IBAction func trainButton(_ sender: UIButton) {
-        let message = OSCMessage(OSCAddressPattern("/wekinator/control/train"), 1)
-        client.send(message)
-        
-    }
-    
-    @IBAction func deleteExamplesButton(_ sender: Any) {
-        let message = OSCMessage(OSCAddressPattern("/wekinator/control/deleteAllExamples"), 1)
-        client.send(message)
-    }
-    
-    @IBAction func toggleRunning(_ sender: UISwitch) {
-        if(sender.isOn){
-            let message = OSCMessage(OSCAddressPattern("/wekinator/control/startRunning"), 1)
-            client.send(message)
-            runningLabel.text = "RUNNING"
-        }else{
-            let message = OSCMessage(OSCAddressPattern("/wekinator/control/stopRunning"), 1)
-            client.send(message)
-            runningLabel.text = "RUN"
-        }
-    }
     
     @IBAction func featureSelector(_ sender: UISegmentedControl) {
         PadsView.isHidden = true
@@ -316,13 +276,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
     func captured(image: UIImage) {
         CameraView.image = image
     }
-            
-//    @IBAction func switchOutput(_ sender: UIStepper) {
-//        let message = OSCMessage(OSCAddressPattern("/wekinator/control/outputs"), sender.value)
-//        client.send(message)
-//        outputNumText.text = String(Int(sender.value))
-//
-//    }
+
+    
 }
 
 extension UIImage {
