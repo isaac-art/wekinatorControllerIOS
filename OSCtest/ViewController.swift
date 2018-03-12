@@ -241,7 +241,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, FrameExtracto
     
 
     @IBAction func toggleRecording(_ sender: UISwitch) {
-        if(sender.isOn){
+        if(recSwitch.isOn){
             let message = OSCMessage(OSCAddressPattern("/wekinator/control/startRecording"), 1)
             client.send(message)
             recordingLabel.text = "RECORDING"
