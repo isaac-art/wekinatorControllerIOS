@@ -1,7 +1,7 @@
 # wekinatorControllerIOS
 
 
-[![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/download.png)](https://itunes.apple.com/us/app/wekiosc/id1348388657?ls=1&mt=8)
+[![](https://raw.githubusercontent.com/isaac-art/wekinatorControllerIOS/master/download.png)](https://itunes.apple.com/us/app/wekiosc/id1348388657?mt=8)
 
 iOS controller for use with Rebecca Fiebrink's http://wekinator.org/
 
