@@ -9,6 +9,7 @@ running, and deleting examples from the phone.
 Open `Modern/wekioscModern.xcodeproj` in Xcode 26 or newer and select the
 `wekiosc` scheme. The bundle identifier is `uk.ishimura.wekiosc`, matching the
 existing App Store Connect record. Version 1.1 targets iOS 16 and newer.
+Use Xcode 27.1 or newer for iPhone Duo testing and release validation.
 
 `Modern/project.yml` is the XcodeGen source for the project. Regenerate with
 `xcodegen generate` from `Modern/`. The new app has no CocoaPods dependencies.
@@ -28,5 +29,5 @@ camera permission only when selected.
   heading, camera permissions, and network reconnection.
 - Archive with the Apple distribution team, upload version 1.1 to the existing
   App Store record, and capture current iPhone and iPhone Duo screenshots.
-- Set the United Kingdom base price to £0.99 and review Apple's converted
-  prices for all other storefronts before submitting for review.
+- The App Store Connect price is already £0.99 in the United Kingdom, with
+  Apple's comparable worldwide prices. Recheck the schedule before review.
