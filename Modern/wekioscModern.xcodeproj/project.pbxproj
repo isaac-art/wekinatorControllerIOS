@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01D5D3D085C99C4EF45D3AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D272986112434ACE1354C6A7 /* Assets.xcassets */; };
+		1D12C8853817F8CB135D865B /* OSCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54EBF21097FCD9102C4EADA /* OSCClient.swift */; };
+		952DFEAAB594E25E4C1A2D07 /* CameraSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0990215AA53DAC148BC50F /* CameraSampler.swift */; };
+		CCC0D87FBA7AC7228C834C7F /* WekController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A736E9350B70B15182BAB7 /* WekController.swift */; };
+		F6CF96BF38AF5224C7D40963 /* wekioscApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5931ADC13E6010977F3B7CE7 /* wekioscApp.swift */; };
+		F9CF1245C3E7A8CF6C01E2D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8085471C2812E6FEFBFE8785 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05431D11272E424E39DE3F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5931ADC13E6010977F3B7CE7 /* wekioscApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wekioscApp.swift; sourceTree = "<group>"; };
+		8085471C2812E6FEFBFE8785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B2A736E9350B70B15182BAB7 /* WekController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WekController.swift; sourceTree = "<group>"; };
+		CE3A145E6DFD5FF9833EA4B8 /* wekiosc.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = wekiosc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D272986112434ACE1354C6A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF0990215AA53DAC148BC50F /* CameraSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSampler.swift; sourceTree = "<group>"; };
+		F54EBF21097FCD9102C4EADA /* OSCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCClient.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		625C63EBAC79FC7DF80222C4 = {
+			isa = PBXGroup;
+			children = (
+				D272986112434ACE1354C6A7 /* Assets.xcassets */,
+				C3FCB2F52F6DAB8748C09076 /* Sources */,
+				E4BFA7DC42454437B23130FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3FCB2F52F6DAB8748C09076 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EF0990215AA53DAC148BC50F /* CameraSampler.swift */,
+				8085471C2812E6FEFBFE8785 /* ContentView.swift */,
+				05431D11272E424E39DE3F01 /* Info.plist */,
+				F54EBF21097FCD9102C4EADA /* OSCClient.swift */,
+				B2A736E9350B70B15182BAB7 /* WekController.swift */,
+				5931ADC13E6010977F3B7CE7 /* wekioscApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E4BFA7DC42454437B23130FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE3A145E6DFD5FF9833EA4B8 /* wekiosc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94E824AA005FF58C909014A8 /* wekiosc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3E474FF601DC6302C739751 /* Build configuration list for PBXNativeTarget "wekiosc" */;
+			buildPhases = (
+				6288A46F99BBCAB9EECCFF07 /* Sources */,
+				97D67778A7CECA44DC74B8EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wekiosc;
+			packageProductDependencies = (
+			);
+			productName = wekiosc;
+			productReference = CE3A145E6DFD5FF9833EA4B8 /* wekiosc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75D32CB072A477733E1D187C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					94E824AA005FF58C909014A8 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 01099B8E9C1DA9D3622F93B6 /* Build configuration list for PBXProject "wekioscModern" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 625C63EBAC79FC7DF80222C4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E4BFA7DC42454437B23130FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94E824AA005FF58C909014A8 /* wekiosc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97D67778A7CECA44DC74B8EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D5D3D085C99C4EF45D3AAE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6288A46F99BBCAB9EECCFF07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952DFEAAB594E25E4C1A2D07 /* CameraSampler.swift in Sources */,
+				F9CF1245C3E7A8CF6C01E2D0 /* ContentView.swift in Sources */,
+				1D12C8853817F8CB135D865B /* OSCClient.swift in Sources */,
+				CCC0D87FBA7AC7228C834C7F /* WekController.swift in Sources */,
+				F6CF96BF38AF5224C7D40963 /* wekioscApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2459EAA596981732BA2E1E3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3C6136FEC4A5757B403C940D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.ishimura.wekiosc;
+				PRODUCT_NAME = wekiosc;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C429C19580E24AB89D37823B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EB744AB766B6F9F66EA135DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.ishimura.wekiosc;
+				PRODUCT_NAME = wekiosc;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01099B8E9C1DA9D3622F93B6 /* Build configuration list for PBXProject "wekioscModern" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C429C19580E24AB89D37823B /* Debug */,
+				2459EAA596981732BA2E1E3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E3E474FF601DC6302C739751 /* Build configuration list for PBXNativeTarget "wekiosc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB744AB766B6F9F66EA135DA /* Debug */,
+				3C6136FEC4A5757B403C940D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75D32CB072A477733E1D187C /* Project object */;
+}

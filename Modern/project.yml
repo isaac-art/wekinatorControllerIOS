@@ -1,0 +1,33 @@
+name: wekioscModern
+options:
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  wekiosc:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Assets.xcassets
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: uk.ishimura.wekiosc
+        PRODUCT_NAME: wekiosc
+        MARKETING_VERSION: 1.1
+        CURRENT_PROJECT_VERSION: 1
+        SWIFT_VERSION: 5.0
+        TARGETED_DEVICE_FAMILY: 1
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Automatic
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: wekiosc
+        ITSAppUsesNonExemptEncryption: false
+        NSCameraUsageDescription: Camera input sends sampled brightness values to your Wekinator host.
+        NSLocalNetworkUsageDescription: Sends OSC data to Wekinator on your local network.
+        NSLocationWhenInUseUsageDescription: Heading can be used as an optional Wekinator input.
+        NSMotionUsageDescription: Motion input sends device sensor values to Wekinator.
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
