@@ -31,4 +31,4 @@ targets:
         NSLocationWhenInUseUsageDescription: Heading can be used as an optional Wekinator input.
         NSMotionUsageDescription: Motion input sends device sensor values to Wekinator.
         UILaunchScreen: {}
-        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
