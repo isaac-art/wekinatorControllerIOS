@@ -17,6 +17,12 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity)
             }
             .navigationTitle("wekiosc")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Link("Privacy", destination: URL(string: "https://wekiosc.thanks.fish/privacy.html")!)
+                        .accessibilityIdentifier("privacyLink")
+                }
+            }
             .confirmationDialog("Delete all Wekinator examples?", isPresented: $confirmDelete) {
                 Button("Delete all examples", role: .destructive) { controller.deleteExamples() }
             }

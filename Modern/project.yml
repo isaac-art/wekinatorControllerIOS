@@ -25,6 +25,8 @@ targets:
       path: Sources/Info.plist
       properties:
         CFBundleDisplayName: wekiosc
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         ITSAppUsesNonExemptEncryption: false
         NSCameraUsageDescription: Camera input sends sampled brightness values to your Wekinator host.
         NSLocalNetworkUsageDescription: Sends OSC data to Wekinator on your local network.
